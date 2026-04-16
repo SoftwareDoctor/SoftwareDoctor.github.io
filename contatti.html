@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Contatti - Instructional Design Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+					<h1><a href="index.html">Dopetrope</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="progetti.html">Progetti</a></li>
+							<li><a href="blog.html">Blog</a></li>
+							<li><a href="chi-sono.html">Chi sono</a></li>
+							<li class="current"><a href="contatti.html">Contatti</a></li>
+						</ul>
+					</nav>
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<article class="box post">
+							<header>
+								<h2>Contattami</h2>
+								<p>Invia un messaggio per collaborazioni o informazioni</p>
+							</header>
+							<form id="contact-form" action="#">
+								<div class="row gtr-50">
+									<div class="col-6 col-12-mobile">
+										<input type="text" name="name" id="name" placeholder="Nome" required />
+									</div>
+									<div class="col-6 col-12-mobile">
+										<input type="email" name="email" id="email" placeholder="Email" required />
+									</div>
+									<div class="col-12">
+										<input type="text" name="subject" id="subject" placeholder="Oggetto" required />
+									</div>
+									<div class="col-12">
+										<input type="text" name="phone" id="phone" placeholder="Numero di Telefono" />
+									</div>
+									<div class="col-12">
+										<textarea name="message" id="message" placeholder="Messaggio" rows="6" required></textarea>
+									</div>
+									<div class="col-12">
+										<ul class="actions">
+											<li><input type="submit" value="Invia Messaggio" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+							<div id="form-response" style="display:none; text-align:center; padding: 2em; border: 2px solid #ef8376; border-radius: 6px; margin-top: 2em;">
+								<h3>Messaggio Inviato!</h3>
+								<p>Grazie per avermi contattato. Verrai reindirizzato alla homepage tra pochi secondi...</p>
+							</div>
+						</article>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<section id="footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<section class="dates-container">
+									<header>
+										<h2>Prossimi Eventi</h2>
+									</header>
+									<ul class="dates">
+										<li>
+											<span class="date">Mag <strong>20</strong></span>
+											<h3>Webinar: AI nell'E-learning</h3>
+											<p>Un'esplorazione pratica sull'uso dell'intelligenza artificiale generativa per la creazione di contenuti didattici.</p>
+										</li>
+										<li>
+											<span class="date">Giu <strong>05</strong></span>
+											<h3>Workshop Storyline Advanced</h3>
+											<p>Corso intensivo sulle variabili e le condizioni avanzate in Articulate Storyline.</p>
+										</li>
+										<li>
+											<span class="date">Giu <strong>15</strong></span>
+											<h3>Convegno Formazione 4.0</h3>
+											<p>Presentazione dei nuovi trend nel campo della formazione aziendale e del reskilling digitale.</p>
+										</li>
+									</ul>
+								</section>
+							</div>
+							<div class="col-12">
+								<!-- Copyright -->
+									<div id="copyright">
+										<ul class="links">
+											<li>&copy; Untitled. All rights reserved.</li>
+											<li><a href="mailto:tuaemail@esempio.com">tuaemail@esempio.com</a></li>
+											<li><a href="#" class="icon brands fa-instagram"> Instagram</a></li>
+											<li><a href="#" class="icon brands fa-linkedin-in"> LinkedIn</a></li>
+										</ul>
+									</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				$(function() {
+					$('#contact-form').on('submit', function(e) {
+						e.preventDefault();
+						$(this).fadeOut(300, function() {
+							$('#form-response').fadeIn();
+							setTimeout(function() {
+								window.location.href = 'index.html';
+							}, 4000);
+						});
+					});
+				});
+			</script>
+	</body>
+</html>
