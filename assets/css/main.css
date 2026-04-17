@@ -84,7 +84,9 @@ input, select, textarea {
 	}
 
 	body {
-		background: #252122;
+		background: #e0eafc;
+		background: -webkit-linear-gradient(to right, #d6eaf8, #e0eafc);
+		background: linear-gradient(to right, #d6eaf8, #e0eafc);
 		background-image: url("images/bg02.png");
 	}
 
@@ -102,13 +104,13 @@ input, select, textarea {
 	body, input, textarea, select {
 		font-family: 'Source Sans Pro';
 		font-weight: 300;
-		color: #5d5d5d;
+		color: #1b4f72;
 		font-size: 14pt;
 		line-height: 1.75em;
 	}
 
 	strong, b {
-		color: #252122;
+		color: #1b4f72;
 		font-weight: 400;
 	}
 
@@ -135,7 +137,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #252122;
+		color: #1b4f72;
 		font-weight: 700;
 	}
 
@@ -1446,7 +1448,7 @@ input, select, textarea {
 
 	form label {
 		display: block;
-		color: #252122;
+		color: #1b4f72;
 		font-weight: 400;
 		margin: 0 0 0.5em 0;
 	}
@@ -1594,6 +1596,7 @@ input, select, textarea {
 		.box.post h2 {
 			font-size: 2.5em;
 			letter-spacing: -0.015em;
+            line-height: 1.2em;
 		}
 
 		.box.post header > p {
@@ -1652,7 +1655,7 @@ input, select, textarea {
 		input[type="reset"].alt,
 		button.alt,
 		.button.alt {
-			background: #252122;
+			background: #1b4f72;
 		}
 
 			input[type="button"].alt:hover,
@@ -1660,7 +1663,7 @@ input, select, textarea {
 			input[type="reset"].alt:hover,
 			button.alt:hover,
 			.button.alt:hover {
-				background: #353132;
+				background: #2874a6;
 			}
 
 			input[type="button"].alt:active,
@@ -1668,7 +1671,7 @@ input, select, textarea {
 			input[type="reset"].alt:active,
 			button.alt:active,
 			.button.alt:active {
-				background: #151112;
+				background: #154360;
 			}
 
 		input[type="button"].icon:before,
@@ -1749,6 +1752,7 @@ input, select, textarea {
 	ul.actions {
 		list-style: none;
 		padding-left: 0;
+		margin-top: 40px;
 	}
 
 		ul.actions li {
@@ -2018,13 +2022,13 @@ input, select, textarea {
 	#header {
 		position: relative;
 		background: #ffffff;
-		border-bottom: solid 1px #ccc;
+		border-bottom: 0;
 		padding: 1.5em 0 1em 0;
 		text-align: center;
 	}
 
 		#header h1 {
-			color: #252122;
+			color: #1b4f72;
 			font-weight: 900;
 			font-size: 1.8em;
 			letter-spacing: -0.035em;
@@ -2054,7 +2058,7 @@ input, select, textarea {
 
 				#nav > ul > li > a {
 					border-radius: 5px;
-					color: #5d5d5d;
+					color: #1b4f72;
 					text-decoration: none;
 					padding: 0.4em 0.8em 0.4em 0.8em;
 					-moz-transition: background-color .25s ease-in-out;
@@ -2076,12 +2080,12 @@ input, select, textarea {
 
 	.dropotron {
 		border-radius: 5px;
-		background-color: #252122;
-		background-color: rgba(34, 30, 31, 0.98);
+		background-color: #d6eaf8;
+		background-color: rgba(207, 222, 243, 0.98);
 		padding: 1.25em 1.5em 1.25em 1.5em;
 		font-style: italic;
 		min-width: 13em;
-		box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.5);
+		box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.2);
 		text-align: left;
 		margin-top: -1.25em;
 		margin-left: -1px;
@@ -2089,7 +2093,7 @@ input, select, textarea {
 	}
 
 		.dropotron a, .dropotron span {
-			color: #aaa;
+			color: #1b4f72;
 			text-decoration: none;
 			-moz-transition: color .25s ease-in-out;
 			-webkit-transition: color .25s ease-in-out;
@@ -2102,7 +2106,7 @@ input, select, textarea {
 		}
 
 			.dropotron li:hover > a, .dropotron li:hover > span {
-				color: #fff;
+				color: #d52349;
 			}
 
 		.dropotron.level-0 {
@@ -2118,8 +2122,8 @@ input, select, textarea {
 				top: -9px;
 				border-left: solid 10px transparent;
 				border-right: solid 10px transparent;
-				border-bottom: solid 10px #252122;
-				border-bottom-color: rgba(34, 30, 31, 0.98);
+				border-bottom: solid 10px #d6eaf8;
+				border-bottom-color: rgba(207, 222, 243, 0.98);
 			}
 
 /* Banner */
@@ -2136,14 +2140,13 @@ input, select, textarea {
 	}
 
 		#banner header {
-			background-color: rgba(34, 30, 31, 0.98);
 			display: inline-block;
 			padding: 2.5em 5em;
 			border-radius: 5px;
 		}
 
 			#banner header h2 {
-				color: #fff;
+				color: #1b4f72;
 				font-weight: 700;
 				font-size: 2.5em;
 				margin: 0 0 0.65em 0;
@@ -2234,34 +2237,27 @@ input, select, textarea {
 
 	#main {
 		position: relative;
-		background: #f7f7f7 url("images/bg02.png");
-		padding: 2em 0 0.5em 0;
+		background: transparent;
+		padding: 2em 0 0em 0;
 	}
 
 		#main:before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			background: url("images/bg01.png");
-			background-size: 100% 100%;
-			z-index: 0;
-			opacity: 0.1;
+			display: none;
 		}
 
 		#main .major h2 {
-			background: #f7f7f7 url("images/bg02.png");
+			background: transparent;
 		}
 
 /* Footer */
 
 	#footer {
 		position: relative;
-		color: #858484;
-		padding: 1em 0 0.5em 0;
+		color: #ffffff;
+		padding: 3em 0 0em 0;
 		width: 100%;
 		margin: 0;
+        background: #1b4f72;
 	}
 
 	#footer .container {
@@ -2271,23 +2267,20 @@ input, select, textarea {
 	}
 
 		#footer:before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			background: url("images/bg01.png");
-			background-size: 100% 100%;
-			z-index: 0;
-			opacity: 0.5;
+			display: none;
 		}
 
 		#footer a {
-			color: #c5c4c4;
+			color: #ffffff;
+            opacity: 0.8;
 		}
+        
+        #footer a:hover {
+            opacity: 1;
+        }
 
 		#footer h2, #footer h3, #footer h4, #footer h5, #footer h6, #footer strong, #footer b {
-			color: #fff;
+			color: #ffffff;
 		}
 
 			#footer h2 a, #footer h3 a, #footer h4 a, #footer h5 a, #footer h6 a, #footer strong a, #footer b a {
@@ -2297,8 +2290,7 @@ input, select, textarea {
 		#footer ul.contact li,
 		#footer ul.dates li,
 		#footer ul.divided li {
-			border-top-color: #353434;
-			border-top-color: rgba(255, 255, 255, 0.05);
+			border-top-color: rgba(255, 255, 255, 0.2);
 		}
 
 		#footer header {
@@ -2309,12 +2301,17 @@ input, select, textarea {
 				font-size: 1.75em;
 			}
 
+            #contact-form {
+                max-width: 70%;
+                margin: 0 auto;
+            }
+
 			/* --- FOOTER FULL WIDTH --- */
 
             /* 1. Rende il contenitore del footer largo quanto lo schermo */
             #footer .container {
                 width: 100% !important;
-                max-width: 98% !important; /* Lascia un minimo (1%) di respiro ai lati, puoi mettere 100% se lo vuoi a filo */
+                max-width: 100% !important;
                 margin-left: auto !important;
                 margin-right: auto !important;
             }
@@ -2322,7 +2319,7 @@ input, select, textarea {
             /* 2. Rende la sezione copyright larga quanto lo schermo */
             #copyright .container {
                 width: 100% !important;
-                max-width: 98% !important;
+                max-width: 100% !important;
             }
 
             /* 3. Opzionale: se vuoi che anche il contenuto interno (le righe) occupi tutto lo spazio */
@@ -2335,17 +2332,17 @@ input, select, textarea {
 
 #footer .row > * {
     padding-left: 0 !important;
-    padding-right: 0 !important; /* AGGIUNGI QUESTO */
+    padding-right: 0 !important;
 }
 
 #intro.container {
-    max-width: 900px; /* prova 800–1000px */
+    max-width: 1100px;
     margin: 0 auto;
 }
 
 #intro section {
     margin: 1.5em 0;
-    padding: 1.5em 0;
+    padding: 1.5em 1em;
 }
 
 
@@ -2354,26 +2351,34 @@ input, select, textarea {
 
 /* Copyright */
 
-	/* 2. Riduci il padding della sezione copyright (quella che tocca il fondo pagina) */
     #copyright {
-        padding: 1em 0 0.5em 0 !important; /* 0.5em è lo spazio minimo finale */
+        padding: 1em 0 0.5em 0 !important;
         margin-top: 0 !important;
         line-height: 1 !important;
+        background: #1b4f72;
+        color: #ffffff;
     }
 
-    /* 3. Se presente un elenco di link nel footer, azzera il margine finale */
     #copyright ul {
         margin-bottom: 0 !important;
     }
 
 		#copyright ul.links {
 			display: inline-block;
-			background: #2C2929;
-			background: rgba(255, 255, 255, 0.05);
+			background: rgba(255, 255, 255, 0.1);
 			border-radius: 5px;
 			margin: 0;
 			padding: 0.85em 2.25em 0.85em 2.25em;
+            color: #ffffff;
 		}
+        
+        #copyright ul.links li {
+            border-left-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        #copyright ul.links li a {
+            color: #ffffff;
+        }
 
 /* XLarge */
 
@@ -2476,12 +2481,30 @@ input, select, textarea {
 
 	}
 
+#footer .dates-container {
+    background-color: #CCE8F4;
+    padding: 1.5em 2em;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 900px;
+    color: #1b4f72;
+}
+
+#footer .dates-container h2, 
+#footer .dates-container h3, 
+#footer .dates-container p {
+    color: #1b4f72 !important;
+}
+
 #footer .dates-container header h2 {
-    margin-left: 6.75em !important;
+    margin-left: 0 !important;
+    text-align: center;
+    font-size: 1.4em;
+    margin-bottom: 1em;
 }
 
 .dates {
-    max-width: 700px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -2891,19 +2914,19 @@ input, select, textarea {
 }
 
 .icon.featured.alt {
-    background-color: #252122;
+    background-color: #d6eaf8;
 }
 
 .icon.featured.alt:after {
-    border-top-color: #252122;
+    border-top-color: #d6eaf8;
 }
 
 .icon.featured.alt2 {
-    background-color: #827a7c;
+    background-color: #e0eafc;
 }
 
 .icon.featured.alt2:after {
-    border-top-color: #827a7c;
+    border-top-color: #e0eafc;
 }
 
 		/* Header */
@@ -2914,7 +2937,7 @@ input, select, textarea {
 			}
 
 				#header h1 {
-					color: #252122;
+					color: #1b4f72;
 					font-weight: 900;
 					font-size: 1.75em;
 					letter-spacing: -0.035em;
@@ -2970,5 +2993,11 @@ input, select, textarea {
             margin-top: 0 !important;
         }
 
-
+section.first,
+section.middle,
+section.last {
+    min-height: 300px;
+    padding: 50px !important;
+    border-radius: 12px;
+}
 	}
