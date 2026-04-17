@@ -1,4 +1,4 @@
-# Instructional Design Portfolio - Template Customizzato
+# Instructional Design Portfolio
 
 Questo progetto è un portfolio professionale per **Instructional Designer & Learning Specialist**, basato sul template "Dopetrope" di HTML5 UP e personalizzato per mostrare progetti e-learning, competenze pedagogiche e case study formativi.
 
