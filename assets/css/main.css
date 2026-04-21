@@ -1568,10 +1568,6 @@ input, select, textarea {
 				padding: 0 1em 0 1em;
 			}
 
-	footer {
-		margin: 2.25em 0 0 0;
-	}
-
 /* Box */
 
 	.box {
@@ -1604,9 +1600,7 @@ input, select, textarea {
 			font-size: 1.25em;
 		}
 
-		.box footer ul.actions {
-			margin-bottom: 0;
-		}
+
 
 /* Button */
 
@@ -1777,7 +1771,7 @@ input, select, textarea {
 
 		ul.links li {
 			display: inline-block;
-			border-left: solid 1px rgba(255, 255, 255, 0.05);
+			border-left: solid 1px;
 			padding: 0 0 0 1em;
 			margin: 0 0 0 1em;
 		}
@@ -2216,23 +2210,6 @@ input, select, textarea {
 			min-width: 12em;
 		}
 
-		#intro footer {
-			margin: 0;
-		}
-
-		#intro .row {
-            margin-left: -15px;
-        }
-
-        #intro .row > * {
-            padding-left: 15px;
-        }
-
-    .homepage #footer {
-        margin-top: 0;
-        border-top: 0;
-    }
-
 /* Main */
 
 	#main {
@@ -2249,143 +2226,20 @@ input, select, textarea {
 			background: transparent;
 		}
 
-/* Footer */
 
-	#footer {
-		position: relative;
-		color: #ffffff;
-		padding: 3em 0 0em 0;
-		width: 100%;
-		margin: 0;
-        background: #1b4f72;
-	}
-
-	#footer .container {
-		max-width: 100% !important;
-		width: 100% !important;
-		padding: 0 2em;
-	}
-
-		#footer:before {
-			display: none;
-		}
-
-		#footer a {
-			color: #ffffff;
-            opacity: 0.8;
-		}
-        
-        #footer a:hover {
-            opacity: 1;
-        }
-
-		#footer h2, #footer h3, #footer h4, #footer h5, #footer h6, #footer strong, #footer b {
-			color: #ffffff;
-		}
-
-			#footer h2 a, #footer h3 a, #footer h4 a, #footer h5 a, #footer h6 a, #footer strong a, #footer b a {
-				color: inherit;
-			}
-
-		#footer ul.contact li,
-		#footer ul.dates li,
-		#footer ul.divided li {
-			border-top-color: rgba(255, 255, 255, 0.2);
-		}
-
-		#footer header {
-			margin: 0 0 3em 0;
-		}
-
-			#footer header h2 {
-				font-size: 1.75em;
-			}
 
             #contact-form {
                 max-width: 70%;
                 margin: 0 auto;
             }
 
-			/* --- FOOTER FULL WIDTH --- */
-
-            /* 1. Rende il contenitore del footer largo quanto lo schermo */
-            #footer .container {
-                width: 100% !important;
-                max-width: 100% !important;
-                margin-left: auto !important;
-                margin-right: auto !important;
-            }
-
-            /* 2. Rende la sezione copyright larga quanto lo schermo */
-            #copyright .container {
-                width: 100% !important;
-                max-width: 100% !important;
-            }
-
-            /* 3. Opzionale: se vuoi che anche il contenuto interno (le righe) occupi tutto lo spazio */
-            #footer .row {
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-
-            }
 
 
-#footer .row > * {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
-
-#intro.container {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-#intro section {
-    margin: 1.5em 0;
-    padding: 1.5em 1em;
-}
-
-
-
-
-
-/* Copyright */
-
-    #copyright {
-        padding: 1em 0 0.5em 0 !important;
-        margin-top: 0 !important;
-        line-height: 1 !important;
-        background: #1b4f72;
-        color: #ffffff;
-    }
-
-    #copyright ul {
-        margin-bottom: 0 !important;
-    }
-
-		#copyright ul.links {
-			display: inline-block;
-			background: rgba(255, 255, 255, 0.1);
-			border-radius: 5px;
-			margin: 0;
-			padding: 0.85em 2.25em 0.85em 2.25em;
-            color: #ffffff;
-		}
-        
-        #copyright ul.links li {
-            border-left-color: rgba(255, 255, 255, 0.2);
-        }
-        
-        #copyright ul.links li a {
-            color: #ffffff;
-        }
 
 /* XLarge */
-
 	@media screen and (max-width: 1680px) {
 
 		/* Basic */
-
 			body, input, textarea, select {
 				font-size: 12pt;
 			}
@@ -2393,33 +2247,26 @@ input, select, textarea {
 	}
 
 /* Large */
-
 	@media screen and (max-width: 1280px) {
-
 		/* Basic */
-
 			body, input, textarea, select {
 				font-size: 11pt;
 			}
 
 		/* Section/Article */
-
 			header.major {
 				margin: 0.75em 0 2.5em 0;
 			}
-
 				header.major h2 {
 					padding: 0 1em 0 1em;
 				}
 
 		/* Social */
-
 			ul.social li {
 				margin: 0 0 0.25em 0.75em;
 			}
 
 		/* Header */
-
 			#header {
 				padding: 4em 0 3em 0;
 			}
@@ -2431,174 +2278,38 @@ input, select, textarea {
 				margin: 3em 0 0 0;
 			}
 
-		/* Intro */
 
-			#intro {
-				padding: 0;
-			}
-
-				#intro section {
-					padding: 1em 2em;
-				}
-
-				#intro .middle:before {
-					left: -12px;
-				}
-
-				#intro .middle:after {
-					right: -12px;
-				}
 
 		/* Main */
-
 			#main {
 				padding: 30px 0;
 			}
-
-		/* Footer */
-
-			#footer {
-				padding: 1em 0;
-			}
-
-				#footer:before {
-					height: 2.5em;
-				}
-
-				#footer header {
-					margin: 0 0 1.5em 0;
-				}
-
-					#footer header h2 {
-						font-size: 1.25em;
-					}
-
-		/* Copyright */
-
-			#copyright {
-				margin: 0;
-			}
-
 	}
 
-#footer .dates-container {
-    background-color: #CCE8F4;
-    padding: 1.5em 2em;
-    border-radius: 10px;
-    margin: 0 auto;
-    max-width: 900px;
-    color: #1b4f72;
-}
-
-#footer .dates-container h2, 
-#footer .dates-container h3, 
-#footer .dates-container p {
-    color: #1b4f72 !important;
-}
-
-#footer .dates-container header h2 {
-    margin-left: 0 !important;
-    text-align: center;
-    font-size: 1.4em;
-    margin-bottom: 1em;
-}
-
-.dates {
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-
-
 /* Medium */
-
 	#navPanel, #titleBar {
 		display: none;
 	}
 
 	@media screen and (max-width: 980px) {
-
 		/* Basic */
-
 			html, body {
 				overflow-x: hidden;
 			}
 
-		/* Box */
-
-			.box footer ul.actions li {
-				margin: 1em 0 0 0;
-				display: block;
-			}
-
-				.box footer ul.actions li .button {
-					width: 100%;
-				}
-
-				.box footer ul.actions li:first-child {
-					margin-top: 0;
-				}
 
 		/* Header */
-
 			#header {
 				padding: 3.5em 0 3em 0;
 			}
 
 		/* Nav */
-
 			#nav {
 				display: none;
 			}
 
-		/* Intro */
-
-			#intro {
-				padding: 3em 0 0 0;
-			}
-
-				#intro section {
-					position: relative;
-					border-top: solid 1px #dfdfdf;
-					margin: 0;
-					padding: 40px 0 0 0;
-				}
-
-					#intro section.first {
-						border-top: 0;
-						padding-top: 0;
-					}
-
-					#intro section p {
-						margin: 0;
-					}
-
-				#intro .middle:before, #intro .middle:after {
-					display: none;
-				}
-
-				#intro footer {
-					padding: 3em 0 0 0;
-				}
-
-					#intro footer ul.actions {
-						margin-bottom: 0;
-					}
-
-		/* Main */
-
-			#main {
-				padding: 40px 0;
-			}
-
-		/* Copyright */
-
-			#copyright ul.links {
-				display: block;
-			}
 
 		/* Nav */
-
 			#page-wrapper {
 				-moz-backface-visibility: hidden;
 				-webkit-backface-visibility: hidden;
@@ -2763,7 +2474,6 @@ input, select, textarea {
 	}
 
 /* Small */
-
 	@media screen and (max-width: 736px) {
 
 		/* Basic */
@@ -2771,13 +2481,11 @@ input, select, textarea {
 			body, input, textarea, select {
 				font-size: 11pt;
 			}
-
 			h2, h3, h4, h5, h6 {
 				font-size: 1.25em;
 			}
 
 		/* Button */
-
 			input[type="button"].large,
 			input[type="submit"].large,
 			input[type="reset"].large,
@@ -2788,7 +2496,6 @@ input, select, textarea {
 			}
 
 		/* Actions */
-
 			ul.actions li {
 				margin: 1em 0 0 0;
 				display: block;
@@ -2803,7 +2510,6 @@ input, select, textarea {
 				}
 
 		/* Section/Article */
-
 			section, article {
 				margin-bottom: 20px;
 			}
@@ -2812,9 +2518,7 @@ input, select, textarea {
 				margin: 0 0 1em 0;
 			}
 
-			footer {
-				margin: 2em 0 0 0;
-			}
+
 
 		/* Box */
 
@@ -2843,11 +2547,7 @@ input, select, textarea {
 					font-size: 1em;
 				}
 
-		/* Divided */
 
-			ul.divided li {
-				padding: 0.5em 0 0.5em 0;
-			}
 
 		/* Contact */
 
@@ -2943,20 +2643,7 @@ input, select, textarea {
 					letter-spacing: -0.035em;
 				}
 
-		/* Intro */
 
-			#intro {
-				padding: 2em 0 0 0;
-			}
-
-				#intro section {
-					padding: 40px 0 0 0;
-					margin: 20px 0 0 0;
-				}
-
-				#intro h2 {
-					font-size: 1.25em;
-				}
 
 		/* Banner */
 
@@ -2987,11 +2674,7 @@ input, select, textarea {
 				padding: 20px 0;
 			}
 
-		/* 1. Riduci il padding generale del footer */
-        #footer {
-            padding: 2em 0 1em 0 !important; /* Il terzo valore (1em) è lo spazio inferiore */
-            margin-top: 0 !important;
-        }
+
 
 section.first,
 section.middle,
