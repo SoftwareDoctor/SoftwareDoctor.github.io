@@ -74,7 +74,7 @@ body {
 /* Footer */
 #footer {
     background: #2c3e50 !important;
-    text: align;
+    text-align: center;
     color: #bdc3c7 !important;
     padding: 0.2em 0 0 0 !important; /* Rimosso padding inferiore */
     margin-top: 0 !important;
@@ -92,43 +92,31 @@ body {
     color: #3498db !important;
 }
 
-#footer #copyright {
-    border-top: 1px solid rgba(255,255,255,0.1) !important;
-    padding: 2em 1em !important;
-    margin: 0 !important;
-    color: #7f8c8d !important;
-    width: 100%;
-    text-align: center;
-}
-
-#footer #copyright ul {
+#footer .links {
     margin-bottom: 0 !important;
     display: flex;
-    flex-direction: row !important; /* Forza la disposizione orizzontale */
-    flex-wrap: nowrap !important;   /* Impedisce di andare a capo */
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
     justify-content: center;
     list-style: none;
     padding: 0;
-    overflow-x: auto; /* Permette lo scroll se lo schermo è troppo piccolo, evitando rotture del layout */
+    width: 100%;
 }
 
-#footer #copyright ul li {
-    margin: 0 0.8em !important;
+#footer .links li {
+    margin: 0.5em 0.8em !important;
     border: none !important;
     padding: 0 !important;
     line-height: 1.5;
-    white-space: nowrap !important; /* Impedisce al testo di spezzarsi */
+    white-space: nowrap !important;
     font-size: 0.9em;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 736px) {
-    #footer #copyright {
-        padding: 1.5em 0.5em !important;
-    }
-    
-    #footer #copyright ul li {
-        margin: 0 0.4em !important;
-        font-size: 0.75em; /* Riduce leggermente il font su mobile per far stare tutto */
+    #footer .links li {
+        margin: 0.3em 0.4em !important;
+        font-size: 0.8em;
     }
 }
 
@@ -165,7 +153,121 @@ body {
     box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
 }
 
-#accept-cookies {
-    background: #3498db !important;
-    font-weight: 700;
+/* Interlocking Section Shapes */
+#header {
+    background: #ffffff !important;
+    position: relative;
+    padding-bottom: 20px !important;
+    z-index: 10;
+    margin-bottom: 0 !important;
+}
+
+#banner {
+    background-size: cover !important;
+    padding: 6em 0 120px 0 !important;
+    clip-path: polygon(0 0, 50% 40px, 100% 0, 100% calc(100% - 40px), 50% 100%, 0 calc(100% - 40px));
+    margin-top: -40px !important;
+    z-index: 8;
+    position: relative;
+}
+
+#intro-wrapper {
+    background: #f4f7f6 !important;
+    padding: 70px 0 50px 0 !important;
+    margin-top: -40px !important; /* Pull up to interlock with banner */
+    clip-path: polygon(0 0, 50% 40px, 100% 0, 100% calc(100% - 40px), 50% 100%, 0 calc(100% - 40px));
+    position: relative;
+    z-index: 5;
+}
+
+#events-section {
+    background: #ffffff !important;
+    padding: 100px 0 60px 0 !important;
+    margin-top: -40px !important;
+    clip-path: polygon(0 0, 50% 40px, 100% 0, 100% 100%, 0 100%);
+}
+
+#main {
+    background: #f8fafd !important; /* Light background for internal pages main */
+    padding: 100px 0 80px 0 !important;
+    margin-top: -40px !important;
+    clip-path: polygon(0 0, 50% 40px, 100% 0, 100% 100%, 0 100%);
+    position: relative;
+    z-index: 5;
+}
+
+/* Specific adjustment for Intro inside the wrapper */
+#intro {
+    background: transparent !important;
+    margin-bottom: 0 !important;
+}
+
+/* Interactive Effects */
+
+/* Nav Links Hover */
+#nav > ul > li > a {
+    transition: all 0.3s ease !important;
+    position: relative;
+}
+
+#nav > ul > li > a:hover {
+    color: #d52349 !important;
+    background: rgba(213, 35, 73, 0.05) !important;
+    transform: translateY(-2px);
+}
+
+#nav > ul > li.current > a:hover {
+    background: #b01d3d !important;
+    color: #fff !important;
+}
+
+/* Buttons Hover */
+.button {
+    transition: all 0.3s ease !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2) !important;
+    filter: brightness(1.1);
+}
+
+.button:active {
+    transform: translateY(-1px);
+}
+
+.button.alt:hover {
+    background: #1a2a6c !important;
+    color: #fff !important;
+}
+
+/* Footer Links Hover */
+#footer .links li a {
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+#footer .links li a:hover {
+    color: #fff !important;
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+/* Icon Animations */
+.icon {
+    transition: transform 0.3s ease;
+}
+
+a:hover .icon {
+    transform: scale(1.2);
+}
+
+/* Cookie Banner Button */
+#accept-cookies:hover {
+    background: #2980b9 !important;
+    transform: scale(1.05);
 }
