@@ -147,6 +147,43 @@ body {
     }
 }
 
+/* Contact Form Compact Style */
+#contact-form {
+    max-width: 450px; /* Ulteriormente ridotto */
+    margin: 0 auto !important;
+    font-size: 0.85em; /* Testo più piccolo */
+}
+
+#contact-form .row {
+    margin-top: -15px !important;
+    margin-left: -15px !important;
+}
+
+#contact-form .row > * {
+    padding: 15px 0 0 15px !important;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    padding: 0.4em 0.6em !important; /* Padding ridotto */
+    font-size: 0.9em;
+}
+
+#contact-form textarea {
+    min-height: 80px !important; /* Più basso */
+}
+
+#contact-form .button {
+    font-size: 0.8em !important;
+    padding: 0.6em 1.5em !important;
+}
+
+#contact-form .actions {
+    margin-top: 0.8em !important;
+    text-align: center;
+}
+
 /* Cookie Banner professional look */
 #cookie-banner {
     background: #1a2a6c !important;
@@ -157,7 +194,7 @@ body {
 #header {
     background: #ffffff !important;
     position: relative;
-    padding-bottom: 20px !important;
+    padding-bottom: 0px !important;
     z-index: 10;
     margin-bottom: 0 !important;
 }
