@@ -38,47 +38,65 @@
 			<!-- Main -->
 				<section id="main">
 					<div class="container">
-						<div class="row">
-							<div class="col-8 col-12-medium">
-								<article class="box post">
-									<header>
-										<h2>I miei Progetti</h2>
-										<p>Demo e case study di Instructional Design</p>
-									</header>
-									<p>Esplora la mia selezione di progetti di Instructional Design, che spaziano da moduli e-learning interattivi a strategie di gamification e curriculum design.</p>
-                                    
-                                    <section>
-                                        <header><h3>Demo interattiva: Benessere psicologico</h3></header>
-                                        <iframe src="https://app.lumi.education/api/v1/run/NwbcDE/embed" width="100%" height="720" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-                                        <script src="https://app.Lumi.education/api/v1/h5p/core/js/h5p-resizer.js" charset="UTF-8"></script>
-                                    </section>
+						<article class="box post">
+							<header style="text-align: center;">
+								<h2>I miei Progetti</h2>
+								<p>Demo e case study di Instructional Design</p>
+							</header>
+							
+							<div id="project-list" class="row project-grid">
+								<!-- Progetto 1 -->
+								<div class="col-6 col-12-medium project-item blog-item" data-page="1">
+									<section class="box project-card compact-card">
+										<header><h4>Demo: Benessere Psicologico</h4></header>
+										<a href="#" class="image centered small-img"><img src="images/pic01.jpg" alt="" /></a>
+										<p style="font-size: 0.85em;">Progetto interattivo focalizzato sulla salute mentale e strategie di coping.</p>
+										<footer><a href="#" class="button super-small">Guarda Demo</a></footer>
+									</section>
+								</div>
 
-                                    <section>
-                                        <header><h3>Corso Mobile-First: Sicurezza sul Lavoro</h3></header>
-                                        <a href="#" class="image fit" style="margin-bottom: 2em; display: block;"><img src="images/pic02.jpg" alt="Sicurezza sul Lavoro" /></a>
-                                        <p>Sviluppo di un modulo formativo ottimizzato per dispositivi mobili sulla sicurezza nei luoghi di lavoro.</p>
-                                    </section>
+								<!-- Progetto 2 -->
+								<div class="col-6 col-12-medium project-item blog-item" data-page="1">
+									<section class="box project-card compact-card">
+										<header><h4>Mobile-First: Sicurezza</h4></header>
+										<a href="#" class="image centered small-img"><img src="images/pic02.jpg" alt="" /></a>
+										<p style="font-size: 0.85em;">Modulo e-learning ottimizzato per smartphone sulla sicurezza sul lavoro.</p>
+										<footer><a href="#" class="button super-small">Scopri di più</a></footer>
+									</section>
+								</div>
 
-                                    <section>
-                                        <header><h3>Gamification in Azienda: Sales Training</h3></header>
-                                        <a href="#" class="image fit" style="margin-bottom: 2em; display: block;"><img src="images/pic03.jpg" alt="Sales Training" /></a>
-                                        <p>Un percorso di formazione per la forza vendita che utilizza elementi di gioco.</p>
-                                    </section>
+								<!-- Progetto 3 -->
+								<div class="col-6 col-12-medium project-item blog-item" data-page="2" style="display:none;">
+									<section class="box project-card compact-card">
+										<header><h4>Sales Training Gamificato</h4></header>
+										<a href="#" class="image centered small-img"><img src="images/pic03.jpg" alt="" /></a>
+										<p style="font-size: 0.85em;">Percorso formativo per la forza vendita che utilizza elementi di gamification.</p>
+										<footer><a href="#" class="button super-small">Dettagli Progetto</a></footer>
+									</section>
+								</div>
 
-                                    <!-- Pagination -->
-                                    <div class="pagination-container" style="margin-top: 3em; text-align: center;">
-                                        <ul class="actions small">
-                                            <li><a href="#" class="button small">1</a></li>
-                                            <li><a href="#" class="button small alt">2</a></li>
-                                            <li><a href="#" class="button small alt">Next</a></li>
-                                        </ul>
+								<!-- Progetto 4 -->
+								<div class="col-6 col-12-medium project-item blog-item" data-page="2" style="display:none;">
+									<section class="box project-card compact-card">
+										<header><h4>Design Cognitivo</h4></header>
+										<a href="#" class="image centered small-img"><img src="images/pic09.jpg" alt="" /></a>
+										<p style="font-size: 0.85em;">Ottimizzazione dell'interfaccia basata sui principi del carico cognitivo.</p>
+										<footer><a href="#" class="button super-small">Leggi Case Study</a></footer>
+									</section>
+								</div>
+							</div>
+
+                            <!-- Pagination -->
+                            <div class="pagination-container" style="margin-top: 2em; text-align: center; display: flex; justify-content: center;">
+                                <ul class="pagination-list">
+                                    <li><a href="#" id="prev-page" class="button super-small alt disabled">Prev</a></li>
+                                    <div id="page-numbers-list" style="display: flex; align-items: center; margin: 0;">
+                                        <!-- Numeri generati via JS -->
                                     </div>
-								</article>
-							</div>
-							<div class="col-4 col-12-medium">
-								<!-- Sidebar Vuota -->
-							</div>
-						</div>
+                                    <li><a href="#" id="next-page" class="button super-small alt">Next</a></li>
+                                </ul>
+                            </div>
+						</article>
 					</div>
 				</section>
 
@@ -90,7 +108,7 @@
                         <li><a href="privacy.html">Privacy Policy</a></li>
                         <li><a href="cookie.html">Cookie Policy</a></li>
                         <li><a href="mailto:andrea_italiano87@yahoo.com">andrea_italiano87@yahoo.com</a></li>
-                        <li><a href="https://www.linkedin.com/in/andrea-italiano/" class="fa-brands fa-linkedin"> LinkedIn</a></li>
+                        <li><a href="https://www.linkedin.com/in/andrea-italiano/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
                     </ul>
                 </div>
             </footer>
@@ -105,5 +123,55 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/cookie-banner.js"></script>
+            <script>
+                $(function() {
+                    let currentPage = 1;
+                    const totalPages = 2;
+
+                    function updatePagination() {
+                        $('.blog-item').hide();
+                        $(`.blog-item[data-page="${currentPage}"]`).fadeIn();
+                        
+                        // Genera numeri cliccabili
+                        let numbersHtml = '';
+                        for (let i = 1; i <= totalPages; i++) {
+                            numbersHtml += `<li><a href="#" class="page-num button super-small ${i === currentPage ? '' : 'alt'}" data-page="${i}">${i}</a></li>`;
+                        }
+                        $('#page-numbers-list').html(numbersHtml);
+                        
+                        if (currentPage === 1) $('#prev-page').addClass('disabled');
+                        else $('#prev-page').removeClass('disabled');
+                        
+                        if (currentPage === totalPages) $('#next-page').addClass('disabled');
+                        else $('#next-page').removeClass('disabled');
+                    }
+
+                    $(document).on('click', '.page-num', function(e) {
+                        e.preventDefault();
+                        currentPage = $(this).data('page');
+                        updatePagination();
+                        $('html, body').animate({ scrollTop: $('#main').offset().top - 100 }, 500);
+                    });
+
+                    // Initial call
+                    updatePagination();
+
+                    $('#prev-page').on('click', function(e) {
+                        e.preventDefault();
+                        if (currentPage > 1) {
+                            currentPage--;
+                            updatePagination();
+                        }
+                    });
+
+                    $('#next-page').on('click', function(e) {
+                        e.preventDefault();
+                        if (currentPage < totalPages) {
+                            currentPage++;
+                            updatePagination();
+                        }
+                    });
+                });
+            </script>
 	</body>
 </html>

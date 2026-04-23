@@ -2048,7 +2048,7 @@ input, select, textarea {
 
 			#nav > ul > li {
 				display: inline-block;
-				font-style: italic;
+				font-style: normal;
 				margin: 0 0.1em 0 0.1em;
 			}
 
@@ -2083,7 +2083,7 @@ input, select, textarea {
 		background-color: #d6eaf8;
 		background-color: rgba(207, 222, 243, 0.98);
 		padding: 1.25em 1.5em 1.25em 1.5em;
-		font-style: italic;
+		font-style: normal;
 		min-width: 13em;
 		box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.2);
 		text-align: left;

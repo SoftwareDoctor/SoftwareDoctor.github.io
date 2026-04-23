@@ -31,4 +31,12 @@
 			alignment: 'center'
 		});
 
+	// Contact Form.
+		$('#contact-form').on('submit', function(e) {
+			e.preventDefault();
+			$(this).fadeOut(300, function() {
+				$('#form-response').fadeIn();
+			});
+		});
+
 })(jQuery);

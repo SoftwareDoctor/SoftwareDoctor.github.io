@@ -123,6 +123,18 @@ body {
 /* Force main nav to be visible and hide mobile toggle bar */
 #nav {
     display: block !important;
+    padding-top: 1.5em !important;
+    padding-bottom: 1.5em !important;
+    background: #e8f1f8 !important; /* Azzurro carta pesta chiaro */
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+#nav > ul > li > a {
+    font-weight: 800 !important;
 }
 
 #titleBar, #navPanel {
@@ -147,11 +159,43 @@ body {
     }
 }
 
+/* Modern Cards */
+.box {
+    background: #fff !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(0,0,0,0.03) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04) !important;
+    padding: 2.5em !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.box:hover {
+    box-shadow: 0 15px 45px rgba(0,0,0,0.07) !important;
+}
+
+/* Section Rhythm */
+#main, #intro-wrapper, #events-section, #booking-wrapper {
+    padding: 100px 0 100px 0 !important;
+    margin-top: -40px !important;
+}
+
+/* Typography Optimization */
+p {
+    line-height: 1.8 !important;
+    font-size: 1.05em !important;
+    color: #4a5568 !important;
+}
+
+h2, h3 {
+    letter-spacing: -0.02em !important;
+    margin-bottom: 1em !important;
+}
+
 /* Contact Form Compact Style */
 #contact-form {
-    max-width: 450px; /* Ulteriormente ridotto */
+    max-width: 450px;
     margin: 0 auto !important;
-    font-size: 0.85em; /* Testo più piccolo */
+    font-size: 0.85em;
 }
 
 #contact-form .row {
@@ -166,12 +210,12 @@ body {
 #contact-form input[type="text"],
 #contact-form input[type="email"],
 #contact-form textarea {
-    padding: 0.4em 0.6em !important; /* Padding ridotto */
+    padding: 0.4em 0.6em !important;
     font-size: 0.9em;
 }
 
 #contact-form textarea {
-    min-height: 80px !important; /* Più basso */
+    min-height: 80px !important;
 }
 
 #contact-form .button {
@@ -184,10 +228,112 @@ body {
     text-align: center;
 }
 
-/* Cookie Banner professional look */
-#cookie-banner {
-    background: #1a2a6c !important;
-    box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
+/* Booking Section Style */
+#booking-wrapper {
+    background: #f8fafc !important;
+    clip-path: polygon(0 0, 50% 40px, 100% 0, 100% 100%, 0 100%);
+    position: relative;
+    z-index: 5;
+}
+
+#booking-card {
+    background: #fff !important;
+    border: none !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05) !important;
+    padding: 3em !important;
+    border-radius: 12px !important;
+}
+
+/* Project Grid Alignment */
+.project-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    margin-top: 2em !important;
+}
+
+.project-item {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.project-card {
+    flex: 1 !important; /* Makes all cards in a row equal height */
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 1.5em !important;
+    margin-bottom: 2em !important;
+    text-align: center;
+}
+
+.project-card .image.centered {
+    margin: 0 auto 1.5em auto !important;
+    width: 150px !important; /* Fixed small width for consistency */
+    height: 150px !important;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card .image.centered img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Crops image to fit the square */
+    margin: 0 !important;
+}
+
+.compact-card {
+    padding: 1.2em !important;
+    min-height: 380px !important;
+}
+
+.small-img {
+    width: 120px !important;
+    height: 120px !important;
+}
+
+.disabled {
+    pointer-events: none !important;
+    opacity: 0.4 !important;
+    cursor: default !important;
+}
+
+/* Super Small Buttons */
+.button.super-small {
+    font-size: 0.7em !important;
+    padding: 0.4em 1em !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Pagination Tight Layout */
+.pagination-list {
+    display: inline-flex !important;
+    align-items: center !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.pagination-list li {
+    padding: 0 2px !important;
+    margin: 0 !important;
+}
+
+.pagination-list .button.super-small {
+    min-width: 45px !important; /* Fixed width for consistency */
+    height: 30px !important;
+    line-height: 30px !important;
+    padding: 0 !important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card footer {
+    margin-top: auto !important; /* Pushes the button to the bottom of the card */
+    padding-top: 1.5em !important;
 }
 
 /* Interlocking Section Shapes */
@@ -201,7 +347,7 @@ body {
 
 #banner {
     background-size: cover !important;
-    padding: 6em 0 120px 0 !important;
+    padding: 8em 0 120px 0 !important;
     clip-path: polygon(0 0, 50% 40px, 100% 0, 100% calc(100% - 40px), 50% 100%, 0 calc(100% - 40px));
     margin-top: -40px !important;
     z-index: 8;
@@ -209,28 +355,26 @@ body {
 }
 
 #intro-wrapper {
-    background: #f4f7f6 !important;
+    background: #f8fafc !important;
     padding: 70px 0 50px 0 !important;
-    margin-top: -40px !important; /* Pull up to interlock with banner */
+    margin-top: -40px !important;
     clip-path: polygon(0 0, 50% 40px, 100% 0, 100% calc(100% - 40px), 50% 100%, 0 calc(100% - 40px));
     position: relative;
-    z-index: 5;
+    z-index: 7;
 }
 
 #events-section {
     background: #ffffff !important;
-    padding: 100px 0 60px 0 !important;
-    margin-top: -40px !important;
     clip-path: polygon(0 0, 50% 40px, 100% 0, 100% 100%, 0 100%);
+    position: relative;
+    z-index: 6;
 }
 
 #main {
-    background: #f8fafd !important; /* Light background for internal pages main */
-    padding: 100px 0 80px 0 !important;
-    margin-top: -40px !important;
+    background: #ffffff !important;
     clip-path: polygon(0 0, 50% 40px, 100% 0, 100% 100%, 0 100%);
     position: relative;
-    z-index: 5;
+    z-index: 6;
 }
 
 /* Specific adjustment for Intro inside the wrapper */
