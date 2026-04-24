@@ -9,3 +9,17 @@ https://business.facebook.com
 
 
 https://eventsmanager.facebook.com/events_manager2/overview?act=850913588257752
+
+
+
+netstat -ano | findstr :8080
+
+taskkill /PID 8604 /F
+
+
+
+taskkill /F /IM java.exe
+
+
+npx @google/gemini-cli
+

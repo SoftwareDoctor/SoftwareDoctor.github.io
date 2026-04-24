@@ -1,10 +1,10 @@
 /* 
    Solid Professional Overrides 
    Colors: 
-   - Primary (Deep Navy): #1a2a6c
-   - Accent (Professional Blue): #2a5298
-   - Text (Charcoal): #2c3e50
-   - Background: #f4f7f6
+   - Primary Accent: #7BBFB0 (Tiffany)
+   - Secondary Accent: #A8C5BC (Sage)
+   - Neutral Background: #F5F2EC (Cream)
+   - Deep Primary/Text: #4A6670 (Slate)
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
@@ -17,8 +17,8 @@ html, body {
 
 body {
     font-family: 'Lato', sans-serif !important;
-    color: #2c3e50 !important;
-    background: #f8fafd !important;
+    color: #4A6670 !important;
+    background: #F5F2EC !important;
     background-image: none !important;
     display: flex !important;
     flex-direction: column !important;
@@ -29,54 +29,50 @@ body {
     background-image: none !important;
     display: flex !important;
     flex-direction: column !important;
-    flex: 1 0 auto !important; /* This pushes the footer down */
+    flex: 1 0 auto !important;
 }
 
 /* Ensure no other wrappers have background colors or images */
-#header-wrapper, #main-wrapper, #footer-wrapper {
+# #main-wrapper, #footer-wrapper {
     background: none !important;
 }
 
 /* Prossimi Eventi Section */
 #events-section {
-    background: #ffffff !important;
-    padding: 6em 0 !important;
+    background: #E8E2D8 !important;
+    padding: 100px 0 60px 0 !important;
     flex-shrink: 0 !important;
-}
-
-.dates-container {
-    background: transparent !important;
+    margin-top: -40px !important;
+    clip-path: polygon(0 0, 50% 40px, 100% 0, 100% 100%, 0 100%) !important;
+    position: relative;
+    z-index: 6;
 }
 
 .dates-container h2 {
-    color: #1a2a6c !important;
+    color: #4A6670 !important;
     margin-bottom: 2em !important;
     text-align: center;
 }
 
-.dates li {
-    border-top-color: rgba(0, 0, 0, 0.05) !important;
-}
-
 .dates h3 {
-    color: #1a2a6c !important;
+    color: #7BBFB0 !important;
 }
 
 .dates p {
-    color: #5d6d7e !important;
+    color: #4A6670 !important;
 }
 
 .dates .date {
-    background: #1a2a6c !important;
+    background: #7BBFB0 !important;
     color: #ffffff !important;
 }
 
 /* Footer */
 #footer {
-    background: #2c3e50 !important;
+    background: #4A6670 !important;
     text-align: center;
-    color: #bdc3c7 !important;
-    padding: 0.2em 0 0 0 !important; /* Rimosso padding inferiore */
+    color: #A8C5BC !important;
+    padding: 0.2em 0 0 0 !important;
     margin-top: 0 !important;
     width: 100%;
     flex-shrink: 0 !important;
@@ -85,164 +81,177 @@ body {
 }
 
 #footer h2, #footer h3, #footer strong {
-    color: #ffffff !important;
+    color: #F5F2EC !important;
 }
 
 #footer a {
-    color: #3498db !important;
-}
-
-#footer .links {
-    margin-bottom: 0 !important;
-    display: flex;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    width: 100%;
+    color: #7BBFB0 !important;
 }
 
 #footer .links li {
-    margin: 0.5em 0.8em !important;
-    border: none !important;
-    padding: 0 !important;
-    line-height: 1.5;
-    white-space: nowrap !important;
-    font-size: 0.9em;
     font-weight: bold;
+    color: #F5F2EC !important;
 }
 
-@media screen and (max-width: 736px) {
-    #footer .links li {
-        margin: 0.3em 0.4em !important;
-        font-size: 0.8em;
-    }
+#footer .links li a {
+    color: inherit !important;
 }
 
 /* Force main nav to be visible and hide mobile toggle bar */
 #nav {
     display: block !important;
-    padding-top: 1.5em !important;
-    padding-bottom: 1.5em !important;
-    background: #e8f1f8 !important; /* Azzurro carta pesta chiaro */
+    padding: 1.2em 0 !important;
+    background: #4A6670 !important; /* Slate - same as footer */
     position: fixed !important;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 #nav > ul > li > a {
     font-weight: 800 !important;
+    color: #A8C5BC !important; /* Sage - original navbar color */
+}
+
+#nav > ul > li.current > a {
+    background: #7BBFB0 !important;
+    color: #ffffff !important;
 }
 
 #titleBar, #navPanel {
     display: none !important;
 }
 
-/* Ensure nav items are centered and spaced correctly on mobile */
-@media screen and (max-width: 980px) {
-    #nav {
-        text-align: center;
-        padding: 1em 0;
-    }
-    
-    #nav > ul {
-        display: block;
-        margin: 0;
-    }
-    
-    #nav > ul > li {
-        display: inline-block;
-        margin: 0.5em;
-    }
-}
-
 /* Modern Cards */
-.box {
-    background: #fff !important;
+.box, .box.post, section.box {
+    background: #F5F2EC !important; /* Cream background */
     border-radius: 12px !important;
-    border: 1px solid rgba(0,0,0,0.03) !important;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.04) !important;
-    padding: 2.5em !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-}
-
-.box:hover {
-    box-shadow: 0 15px 45px rgba(0,0,0,0.07) !important;
-}
-
-/* Section Rhythm */
-#main, #intro-wrapper, #events-section, #booking-wrapper {
-    padding: 100px 0 100px 0 !important;
-    margin-top: -40px !important;
+    border: 1px solid rgba(168, 197, 188, 0.4) !important;
+    box-shadow: 0 10px 30px rgba(74, 102, 112, 0.05) !important;
 }
 
 /* Typography Optimization */
 p {
-    line-height: 1.8 !important;
-    font-size: 1.05em !important;
-    color: #4a5568 !important;
+    color: #4A6670 !important;
 }
 
-h2, h3 {
-    letter-spacing: -0.02em !important;
-    margin-bottom: 1em !important;
+h2, h3, h4 {
+    color: #4A6670 !important;
 }
 
 /* Contact Form Compact Style */
-#contact-form {
-    max-width: 450px;
-    margin: 0 auto !important;
-    font-size: 0.85em;
-}
-
-#contact-form .row {
-    margin-top: -15px !important;
-    margin-left: -15px !important;
-}
-
-#contact-form .row > * {
-    padding: 15px 0 0 15px !important;
-}
-
 #contact-form input[type="text"],
 #contact-form input[type="email"],
 #contact-form textarea {
-    padding: 0.4em 0.6em !important;
-    font-size: 0.9em;
-}
-
-#contact-form textarea {
-    min-height: 80px !important;
-}
-
-#contact-form .button {
-    font-size: 0.8em !important;
-    padding: 0.6em 1.5em !important;
-}
-
-#contact-form .actions {
-    margin-top: 0.8em !important;
-    text-align: center;
+    background: #ffffff !important;
+    border: 1px solid #A8C5BC !important;
 }
 
 /* Booking Section Style */
 #booking-wrapper {
-    background: #f8fafc !important;
-    clip-path: polygon(0 0, 50% 40px, 100% 0, 100% 100%, 0 100%);
-    position: relative;
-    z-index: 5;
+    background: #E8E2D8 !important; /* Matches requested color */
+    clip-path: none !important; /* Removed clip-path */
+    padding-top: 0 !important;
 }
 
 #booking-card {
-    background: #fff !important;
+    background: #A8C5BC !important; /* Sage background */
+    margin-top: 0 !important; /* Reset since wrapper has no clip-path */
+    margin-bottom: 4em !important; 
     border: none !important;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.05) !important;
-    padding: 3em !important;
-    border-radius: 12px !important;
 }
+
+/* Specific for Consulenza Psicologica Main */
+.no-sidebar #main {
+    background: #C9B99A !important; /* Notch color */
+    clip-path: polygon(0 0, 50% 40px, 100% 0, 100% 100%, 0 100%) !important;
+    padding-top: 80px !important;
+}
+
+#booking-card h2, #booking-card p {
+    color: #4A6670 !important; /* Ensure text is readable on Sage */
+}
+
+/* Global Header Configuration */
+#header {
+    background: #4A6670 !important; /* Slate - same as footer & navbar */
+    padding: 2em 0 2em 0 !important; /* Standardized space for fixed navbar + breathing room */
+    text-align: center !important;
+    position: relative !important;
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+#header h1 {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+#header h1 a {
+    color: #A8C5BC !important; /* Sage */
+    font-weight: 900 !important;
+    text-decoration: none !important;
+    border: none !important;
+}
+
+#banner {
+    background-size: cover !important;
+    padding: 4em 0 80px 0 !important; /* Ridotto da 8em/120px */
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), 50% 100%, 0 calc(100% - 40px)) !important;
+    margin-top: 0 !important;
+    z-index: 8;
+    position: relative;
+    border-top: none !important;
+}
+
+#intro-wrapper {
+    background: #A8C5BC !important; /* Sage background for contrast */
+    padding: 70px 0 50px 0 !important;
+    margin-top: -40px !important; /* Tight interlock with banner */
+    clip-path: polygon(0 0, 50% 40px, 100% 0, 100% calc(100% - 40px), 50% 100%, 0 calc(100% - 40px)) !important;
+    position: relative;
+    z-index: 7;
+}
+
+/* Buttons */
+.button {
+    background: #7BBFB0 !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+
+.button.alt {
+    background: #4A6670 !important;
+    color: #ffffff !important;
+}
+
+.button:hover {
+    background: #4A6670 !important;
+    color: #ffffff !important;
+}
+
+.button.alt:hover {
+    background: #7BBFB0 !important;
+}
+
+/* Nav Links Hover */
+#nav > ul > li > a:hover {
+    color: #ffffff !important;
+    background: #7BBFB0 !important;
+}
+
+#nav > ul > li.current > a:hover {
+    background: #4A6670 !important;
+}
+
+/* Footer Links Hover */
+#footer .links li a:hover {
+    color: #7BBFB0 !important;
+}
+
+/* --- Layout Restorations --- */
 
 /* Project Grid Alignment */
 .project-grid {
@@ -257,7 +266,7 @@ h2, h3 {
 }
 
 .project-card {
-    flex: 1 !important; /* Makes all cards in a row equal height */
+    flex: 1 !important;
     display: flex !important;
     flex-direction: column !important;
     padding: 1.5em !important;
@@ -265,9 +274,14 @@ h2, h3 {
     text-align: center;
 }
 
+.compact-card {
+    padding: 1.2em !important;
+    min-height: 380px !important;
+}
+
 .project-card .image.centered {
     margin: 0 auto 1.5em auto !important;
-    width: 150px !important; /* Fixed small width for consistency */
+    width: 150px !important;
     height: 150px !important;
     overflow: hidden;
     border-radius: 8px;
@@ -276,37 +290,36 @@ h2, h3 {
     justify-content: center;
 }
 
-.project-card .image.centered img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important; /* Crops image to fit the square */
-    margin: 0 !important;
-}
-
-.compact-card {
-    padding: 1.2em !important;
-    min-height: 380px !important;
-}
-
 .small-img {
     width: 120px !important;
     height: 120px !important;
 }
 
-.disabled {
-    pointer-events: none !important;
-    opacity: 0.4 !important;
-    cursor: default !important;
+.project-card footer {
+    margin-top: auto !important;
+    padding-top: 1.5em !important;
 }
 
-/* Super Small Buttons */
-.button.super-small {
-    font-size: 0.7em !important;
-    padding: 0.4em 1em !important;
-    letter-spacing: 0.5px !important;
+/* Project Page Post Box */
+.right-sidebar .box.post {
+    background: #A8C5BC !important; /* Sage background */
+    margin-top: 4em !important;
+    margin-bottom: 4em !important;
+    border: none !important;
+}
+
+.right-sidebar .box.post h2, 
+.right-sidebar .box.post p {
+    color: #4A6670 !important; /* Ensure readability */
 }
 
 /* Pagination Tight Layout */
+.pagination-container {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+}
+
 .pagination-list {
     display: inline-flex !important;
     align-items: center !important;
@@ -321,7 +334,7 @@ h2, h3 {
 }
 
 .pagination-list .button.super-small {
-    min-width: 45px !important; /* Fixed width for consistency */
+    min-width: 45px !important;
     height: 30px !important;
     line-height: 30px !important;
     padding: 0 !important;
@@ -331,124 +344,36 @@ h2, h3 {
     justify-content: center;
 }
 
-.project-card footer {
-    margin-top: auto !important; /* Pushes the button to the bottom of the card */
-    padding-top: 1.5em !important;
+.disabled {
+    pointer-events: none !important;
+    opacity: 0.4 !important;
+    cursor: default !important;
 }
 
-/* Interlocking Section Shapes */
-#header {
-    background: #ffffff !important;
-    position: relative;
-    padding-bottom: 0px !important;
-    z-index: 10;
-    margin-bottom: 0 !important;
+.button.super-small {
+    font-size: 0.7em !important;
+    padding: 0.4em 1em !important;
+    letter-spacing: 0.5px !important;
 }
+
+/* Interlocking Borders Fix (Ensure they fit after padding updates) */
 
 #banner {
-    background-size: cover !important;
-    padding: 8em 0 120px 0 !important;
-    clip-path: polygon(0 0, 50% 40px, 100% 0, 100% calc(100% - 40px), 50% 100%, 0 calc(100% - 40px));
-    margin-top: -40px !important;
-    z-index: 8;
-    position: relative;
+
 }
 
 #intro-wrapper {
-    background: #f8fafc !important;
-    padding: 70px 0 50px 0 !important;
-    margin-top: -40px !important;
-    clip-path: polygon(0 0, 50% 40px, 100% 0, 100% calc(100% - 40px), 50% 100%, 0 calc(100% - 40px));
-    position: relative;
-    z-index: 7;
-}
-
-#events-section {
-    background: #ffffff !important;
-    clip-path: polygon(0 0, 50% 40px, 100% 0, 100% 100%, 0 100%);
-    position: relative;
-    z-index: 6;
+    clip-path: polygon(0 0, 50% 40px, 100% 0, 100% calc(100% - 40px), 50% 100%, 0 calc(100% - 40px)) !important;
 }
 
 #main {
-    background: #ffffff !important;
-    clip-path: polygon(0 0, 50% 40px, 100% 0, 100% 100%, 0 100%);
+    background: #C9B99A !important; /* Specific color for projects/blog main */
+    clip-path: polygon(0 0, 50% 40px, 100% 0, 100% 100%, 0 100%) !important;
     position: relative;
     z-index: 6;
+    margin-top: -40px !important;
 }
 
-/* Specific adjustment for Intro inside the wrapper */
-#intro {
-    background: transparent !important;
-    margin-bottom: 0 !important;
-}
-
-/* Interactive Effects */
-
-/* Nav Links Hover */
-#nav > ul > li > a {
-    transition: all 0.3s ease !important;
-    position: relative;
-}
-
-#nav > ul > li > a:hover {
-    color: #d52349 !important;
-    background: rgba(213, 35, 73, 0.05) !important;
-    transform: translateY(-2px);
-}
-
-#nav > ul > li.current > a:hover {
-    background: #b01d3d !important;
-    color: #fff !important;
-}
-
-/* Buttons Hover */
-.button {
-    transition: all 0.3s ease !important;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    position: relative;
-    overflow: hidden;
-}
-
-.button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2) !important;
-    filter: brightness(1.1);
-}
-
-.button:active {
-    transform: translateY(-1px);
-}
-
-.button.alt:hover {
-    background: #1a2a6c !important;
-    color: #fff !important;
-}
-
-/* Footer Links Hover */
-#footer .links li a {
-    transition: all 0.2s ease;
-    display: inline-block;
-}
-
-#footer .links li a:hover {
-    color: #fff !important;
-    transform: scale(1.05);
-    text-decoration: none;
-}
-
-/* Icon Animations */
-.icon {
-    transition: transform 0.3s ease;
-}
-
-a:hover .icon {
-    transform: scale(1.2);
-}
-
-/* Cookie Banner Button */
-#accept-cookies:hover {
-    background: #2980b9 !important;
-    transform: scale(1.05);
+#booking-wrapper {
+    clip-path: polygon(0 0, 50% 40px, 100% 0, 100% 100%, 0 100%) !important;
 }

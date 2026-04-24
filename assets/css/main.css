@@ -154,7 +154,7 @@ input, select, textarea {
 	}
 
 	a {
-		color: #d52349;
+		color: #4A6670;
 		text-decoration: underline;
 	}
 
@@ -1614,7 +1614,7 @@ input, select, textarea {
 		cursor: pointer;
 		border: 0;
 		border-radius: 5px;
-		background: #d52349;
+		background: #4A6670;
 		color: #fff !important;
 		font-weight: 700;
 		outline: 0;
@@ -1761,6 +1761,7 @@ input, select, textarea {
 /* Links */
 
 	ul.links {
+		padding-top: 20px;
 		list-style: none;
 		padding-left: 0;
 		width: 100%;
@@ -1838,7 +1839,7 @@ input, select, textarea {
 			position: absolute;
 			left: 0;
 			top: 1.3em;
-			background-color: #d52349;
+			background-color: #4A6670;
 			height: 3.5em;
 			text-align: center;
 			color: #fff;
@@ -1853,7 +1854,7 @@ input, select, textarea {
 				position: absolute;
 				bottom: 0;
 				right: -1.2em;
-				border-left: solid 1.25em #d52349;
+				border-left: solid 1.25em #4A6670;
 				border-top: solid 1.8em transparent;
 				border-bottom: solid 1.8em transparent;
 			}
@@ -2073,7 +2074,7 @@ input, select, textarea {
 				}
 
 				#nav > ul > li.current > a {
-					background: #d52349;
+					background: #4A6670;
 					color: #fff !important;
 					font-weight: 700;
 				}
@@ -2106,7 +2107,7 @@ input, select, textarea {
 		}
 
 			.dropotron li:hover > a, .dropotron li:hover > span {
-				color: #d52349;
+				color: #4A6670;
 			}
 
 		.dropotron.level-0 {
@@ -2153,7 +2154,7 @@ input, select, textarea {
 			}
 
 			#banner header p {
-				color: #d52349;
+				color: #4A6670;
 				padding: 0;
 				font-style: normal;
 				margin: 0;
@@ -2274,7 +2275,7 @@ input, select, textarea {
 
 		/* Header */
 			#header {
-				padding: 4em 0 3em 0;
+				padding: 2em 0 3em 0;
 			}
 
 		/* Banner */
@@ -2613,7 +2614,7 @@ input, select, textarea {
 
 .icon.featured:after {
     bottom: -1.2em;
-    border-top: solid 1.2em #d52349;
+    border-top: solid 1.2em #4A6670;
     border-left: solid 2em transparent;
     border-right: solid 2em transparent;
 }
