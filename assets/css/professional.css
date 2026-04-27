@@ -373,6 +373,25 @@ h2, h3, h4 {
 }
 
 .page-consulenza #main {
-    background: #7BBFB0 !important;
+    background: #A8C5BC !important;
     clip-path: polygon(0 0, 50% 40px, 100% 0, 100% calc(100% - 40px), 50% 100%, 0 calc(100% - 40px)) !important;
+}
+/* Contact Page - Compact Form Box */
+.contact-compact {
+    max-width: 800px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 2.5em 3em !important;
+}
+
+.contact-compact header {
+    margin-bottom: 2em !important;
+}
+
+.contact-compact header h2 {
+    font-size: 1.8em !important;
+}
+
+.contact-compact header p {
+    font-size: 1em !important;
 }
