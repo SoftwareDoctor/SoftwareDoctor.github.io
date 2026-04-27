@@ -1,6 +1,6 @@
-/* 
-   Solid Professional Overrides 
-   Colors: 
+/*
+   Solid Professional Overrides
+   Colors:
    - Primary Accent: #7BBFB0 (Tiffany)
    - Secondary Accent: #A8C5BC (Sage)
    - Neutral Background: #F5F2EC (Cream)
@@ -33,7 +33,7 @@ body {
 }
 
 /* Ensure no other wrappers have background colors or images */
-# #main-wrapper, #footer-wrapper {
+#main-wrapper, #footer-wrapper {
     background: none !important;
 }
 
@@ -130,6 +130,7 @@ body {
     border-radius: 12px !important;
     border: 1px solid rgba(168, 197, 188, 0.4) !important;
     box-shadow: 0 10px 30px rgba(74, 102, 112, 0.05) !important;
+    margin-top: 35px;
 }
 
 /* Typography Optimization */
@@ -150,34 +151,21 @@ h2, h3, h4 {
 }
 
 /* Booking Section Style */
-#booking-wrapper {
-    background: #E8E2D8 !important; /* Matches requested color */
-    clip-path: none !important; /* Removed clip-path */
-    padding-top: 0 !important;
-}
-
 #booking-card {
-    background: #A8C5BC !important; /* Sage background */
-    margin-top: 0 !important; /* Reset since wrapper has no clip-path */
-    margin-bottom: 4em !important; 
+    background: #F5F2EC !important;
+    margin-top: 0 !important;
+    margin-bottom: 6em !important;
     border: none !important;
 }
 
-/* Specific for Consulenza Psicologica Main */
-.no-sidebar #main {
-    background: #C9B99A !important; /* Notch color */
-    clip-path: polygon(0 0, 50% 40px, 100% 0, 100% 100%, 0 100%) !important;
-    padding-top: 80px !important;
-}
-
 #booking-card h2, #booking-card p {
-    color: #4A6670 !important; /* Ensure text is readable on Sage */
+    color: #4A6670 !important;
 }
 
 /* Global Header Configuration */
 #header {
-    background: #4A6670 !important; /* Slate - same as footer & navbar */
-    padding: 2em 0 2em 0 !important; /* Standardized space for fixed navbar + breathing room */
+    background: #4A6670 !important;
+    padding: 2em 0 2em 0 !important;
     text-align: center !important;
     position: relative !important;
     margin: 0 !important;
@@ -190,29 +178,10 @@ h2, h3, h4 {
 }
 
 #header h1 a {
-    color: #A8C5BC !important; /* Sage */
+    color: #A8C5BC !important;
     font-weight: 900 !important;
     text-decoration: none !important;
     border: none !important;
-}
-
-#banner {
-    background-size: cover !important;
-    padding: 4em 0 80px 0 !important; /* Ridotto da 8em/120px */
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), 50% 100%, 0 calc(100% - 40px)) !important;
-    margin-top: 0 !important;
-    z-index: 8;
-    position: relative;
-    border-top: none !important;
-}
-
-#intro-wrapper {
-    background: #A8C5BC !important; /* Sage background for contrast */
-    padding: 70px 0 50px 0 !important;
-    margin-top: -40px !important; /* Tight interlock with banner */
-    clip-path: polygon(0 0, 50% 40px, 100% 0, 100% calc(100% - 40px), 50% 100%, 0 calc(100% - 40px)) !important;
-    position: relative;
-    z-index: 7;
 }
 
 /* Buttons */
@@ -251,9 +220,7 @@ h2, h3, h4 {
     color: #7BBFB0 !important;
 }
 
-/* --- Layout Restorations --- */
-
-/* Project Grid Alignment */
+/* Layout Restorations */
 .project-grid {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -300,20 +267,18 @@ h2, h3, h4 {
     padding-top: 1.5em !important;
 }
 
-/* Project Page Post Box */
 .right-sidebar .box.post {
-    background: #A8C5BC !important; /* Sage background */
-    margin-top: 4em !important;
-    margin-bottom: 4em !important;
+    background: #A8C5BC !important;
+    margin-top: 35px !important;
+    margin-bottom: 6em !important;
     border: none !important;
 }
 
-.right-sidebar .box.post h2, 
+.right-sidebar .box.post h2,
 .right-sidebar .box.post p {
-    color: #4A6670 !important; /* Ensure readability */
+    color: #4A6670 !important;
 }
 
-/* Pagination Tight Layout */
 .pagination-container {
     display: flex !important;
     justify-content: center !important;
@@ -356,24 +321,58 @@ h2, h3, h4 {
     letter-spacing: 0.5px !important;
 }
 
-/* Interlocking Borders Fix (Ensure they fit after padding updates) */
+/* Interlocking Sections */
 
 #banner {
+    background: linear-gradient(135deg, #f1f1f1 0%, #7BBFB0 100%) !important;
+    background-size: cover !important;
+    padding: 6em 0 100px 0 !important;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), 50% 100%, 0 calc(100% - 40px)) !important;
+    margin-top: 0 !important;
+    z-index: 8;
+    position: relative;
+    border-top: none !important;
+    text-align: center !important;
+}
 
+#banner header h2 {
+    color: #4A6670 !important;
+    font-weight: 900 !important;
+}
+
+#banner header p {
+    color: #4A6670 !important;
+    
 }
 
 #intro-wrapper {
+    background: #A8C5BC !important;
+    padding: 70px 0 50px 0 !important;
+    margin-top: -40px !important;
     clip-path: polygon(0 0, 50% 40px, 100% 0, 100% calc(100% - 40px), 50% 100%, 0 calc(100% - 40px)) !important;
+    position: relative;
+    z-index: 7;
 }
 
 #main {
-    background: #C9B99A !important; /* Specific color for projects/blog main */
+    background: #E8E2D8 !important;
     clip-path: polygon(0 0, 50% 40px, 100% 0, 100% 100%, 0 100%) !important;
     position: relative;
     z-index: 6;
     margin-top: -40px !important;
+    padding-bottom: 60px !important;
 }
 
 #booking-wrapper {
+    background: #E8E2D8 !important;
     clip-path: polygon(0 0, 50% 40px, 100% 0, 100% 100%, 0 100%) !important;
+    margin-top: -40px !important;
+    padding-top: 60px !important;`n    padding-bottom: 80px !important;
+    position: relative;
+    z-index: 5;
+}
+
+.page-consulenza #main {
+    background: #7BBFB0 !important;
+    clip-path: polygon(0 0, 50% 40px, 100% 0, 100% calc(100% - 40px), 50% 100%, 0 calc(100% - 40px)) !important;
 }
