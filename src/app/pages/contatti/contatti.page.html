@@ -1,0 +1,49 @@
+<section id="banner">
+  <header>
+    <h2>Contatti</h2>
+    <p>Sviluppo di percorsi formativi innovativi e consulenza psicologica professionale</p>
+  </header>
+</section>
+
+<section id="main">
+  <div class="container">
+    <article class="box post contact-compact">
+      <header>
+        <h2>Contattami</h2>
+        <p>Invia un messaggio per collaborazioni o informazioni</p>
+      </header>
+
+      <form id="contact-form" (ngSubmit)="submit()" *ngIf="!sent" #f="ngForm">
+        <div class="row gtr-50">
+          <div class="col-6 col-12-mobile">
+            <input type="text" name="name" placeholder="Nome" required [(ngModel)]="model.name" />
+          </div>
+          <div class="col-6 col-12-mobile">
+            <input type="email" name="email" placeholder="Email" required [(ngModel)]="model.email" />
+          </div>
+          <div class="col-12">
+            <input type="text" name="subject" placeholder="Oggetto" required [(ngModel)]="model.subject" />
+          </div>
+          <div class="col-12">
+            <textarea name="message" placeholder="Messaggio" rows="6" required [(ngModel)]="model.message"></textarea>
+          </div>
+          <div class="col-12">
+            <ul class="actions">
+              <li><input type="submit" value="Invia Messaggio" [disabled]="f.invalid" /></li>
+            </ul>
+          </div>
+        </div>
+      </form>
+
+      <div
+        id="form-response"
+        *ngIf="sent"
+        style="text-align: center; padding: 2em; border: 2px solid #1b4f72; border-radius: 6px; margin-top: 2em"
+      >
+        <h3>Messaggio Inviato!</h3>
+        <p>Grazie per avermi contattato. Verrai reindirizzato alla homepage tra pochi secondi...</p>
+      </div>
+    </article>
+  </div>
+</section>
+

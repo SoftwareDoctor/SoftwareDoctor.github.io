@@ -1,0 +1,33 @@
+<div id="page-wrapper">
+  <section id="header">
+    <nav id="nav">
+      <ul>
+        <li routerLinkActive="current" [routerLinkActiveOptions]="{ exact: true }"><a routerLink="/">Home</a></li>
+        <li routerLinkActive="current"><a routerLink="/consulenza-psicologica">Consulenza Psicologica</a></li>
+        <li routerLinkActive="current"><a routerLink="/progetti">Progetti</a></li>
+        <li routerLinkActive="current"><a routerLink="/blog">Blog</a></li>
+        <li routerLinkActive="current"><a routerLink="/chi-sono">Chi sono</a></li>
+        <li routerLinkActive="current"><a routerLink="/contatti">Contatti</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <router-outlet />
+
+  <footer id="footer">
+    <div class="container">
+      <ul class="links">
+        <li>&copy; Andrea Italiano</li>
+        <li><a routerLink="/privacy">Privacy Policy</a></li>
+        <li><a routerLink="/cookie">Cookie Policy</a></li>
+        <li><a href="mailto:andrea_italiano87@yahoo.com">andrea_italiano87@yahoo.com</a></li>
+        <li>
+          <a href="https://www.linkedin.com/in/andrea-italiano/"
+            ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
+          >
+        </li>
+      </ul>
+    </div>
+  </footer>
+</div>
+
