@@ -342,7 +342,7 @@ h2, h3, h4 {
 
 #banner header p {
     color: #4A6670 !important;
-    
+
 }
 
 #intro-wrapper {
@@ -374,7 +374,7 @@ h2, h3, h4 {
 }
 
 .page-consulenza #main {
-    background: #A8C5BC !important;
+    background: #E8E2D8 !important;
     clip-path: polygon(0 0, 50% 40px, 100% 0, 100% calc(100% - 40px), 50% 100%, 0 calc(100% - 40px)) !important;
     padding-bottom: 0 !important;
 }
