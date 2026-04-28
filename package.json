@@ -2,7 +2,7 @@
   "name": "html5up",
   "version": "0.0.0",
   "scripts": {
-    "ng": "C:\\\\Users\\\\andrea.italiano\\\\AppData\\\\Local\\\\Programs\\\\cursor\\\\resources\\\\app\\\\resources\\\\helpers\\\\node.exe ./node_modules/@angular/cli/bin/ng.js",
+    "ng": "ng",
     "start": "npm run ng -- serve",
     "build": "npm run ng -- build",
     "watch": "npm run ng -- build --watch --configuration development",
