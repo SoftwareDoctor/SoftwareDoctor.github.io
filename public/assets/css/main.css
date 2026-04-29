@@ -1839,7 +1839,7 @@ input, select, textarea {
 			position: absolute;
 			left: 0;
 			top: 1.3em;
-			background-color: #4A6670;
+			background-color: rgb(74, 102, 112) !important;
 			height: 3.5em;
 			text-align: center;
 			color: #fff;
@@ -1854,7 +1854,7 @@ input, select, textarea {
 				position: absolute;
 				bottom: 0;
 				right: -1.2em;
-				border-left: solid 1.25em #4A6670;
+				border-left: solid 1.25em rgb(74, 102, 112) !important;
 				border-top: solid 1.8em transparent;
 				border-bottom: solid 1.8em transparent;
 			}
@@ -1867,6 +1867,7 @@ input, select, textarea {
 
 		ul.dates h3 {
 			font-size: 1.1em;
+			color: rgb(74, 102, 112) !important;
 		}
 
 		ul.dates p {
