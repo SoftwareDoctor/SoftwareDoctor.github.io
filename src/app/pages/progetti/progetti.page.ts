@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 type Project = {
   title: string;
@@ -13,7 +14,7 @@ type Project = {
 @Component({
   selector: 'app-progetti-page',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './progetti.page.html',
 })
 export class ProgettiPage {

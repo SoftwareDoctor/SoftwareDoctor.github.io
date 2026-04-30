@@ -1,10 +1,13 @@
 import { AfterViewInit, Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 declare var Calendly: any;
 
 @Component({
   selector: 'app-consulenza-page',
   standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './consulenza.page.html',
 })
 export class ConsulenzaPage implements AfterViewInit {

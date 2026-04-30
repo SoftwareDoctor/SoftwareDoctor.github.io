@@ -4,6 +4,7 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () => import('./pages/home/home.page').then((m) => m.HomePage),
+    pathMatch: 'full',
     data: { bodyClass: 'homepage' },
   },
   {
@@ -18,8 +19,18 @@ export const routes: Routes = [
   },
   {
     path: 'blog',
-    loadComponent: () => import('./pages/blog/blog.page').then((m) => m.BlogPage),
-    data: { bodyClass: 'left-sidebar' },
+    children: [
+      {
+        path: '',
+        loadComponent: () => import('./pages/blog/blog.page').then((m) => m.BlogPage),
+        data: { bodyClass: 'left-sidebar' },
+      },
+      {
+        path: ':slug',
+        loadComponent: () => import('./pages/blog/post-detail.page').then((m) => m.PostDetailPage),
+        data: { bodyClass: 'no-sidebar' },
+      },
+    ],
   },
   {
     path: 'chi-sono',

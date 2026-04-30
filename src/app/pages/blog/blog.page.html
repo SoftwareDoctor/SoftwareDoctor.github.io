@@ -1,7 +1,7 @@
 <section id="banner">
   <header>
     <h2>Blog</h2>
-    <p>Approfondimenti su Instructional Design e Benessere Psicologico</p>
+    <p>Psicologia, benessere psicofisico, formazione e neuroscienze — approfondimenti per capire e stare meglio.</p>
   </header>
 </section>
 
@@ -28,27 +28,7 @@
                 class="button super-small filter-btn"
                 [class.active]="category === 'all'"
                 [class.alt]="category !== 'all'"
-                >Tutti</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                (click)="$event.preventDefault(); setCategory('hr')"
-                class="button super-small filter-btn"
-                [class.active]="category === 'hr'"
-                [class.alt]="category !== 'hr'"
-                >HR</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                (click)="$event.preventDefault(); setCategory('ai')"
-                class="button super-small filter-btn"
-                [class.active]="category === 'ai'"
-                [class.alt]="category !== 'ai'"
-                >AI</a
+              >Tutti</a
               >
             </li>
             <li>
@@ -58,17 +38,27 @@
                 class="button super-small filter-btn"
                 [class.active]="category === 'psicologia'"
                 [class.alt]="category !== 'psicologia'"
-                >Psicologia</a
+              >Psicologia</a
               >
             </li>
             <li>
               <a
                 href="#"
-                (click)="$event.preventDefault(); setCategory('id')"
+                (click)="$event.preventDefault(); setCategory('hr')"
                 class="button super-small filter-btn"
-                [class.active]="category === 'id'"
-                [class.alt]="category !== 'id'"
-                >Instructional Design</a
+                [class.active]="category === 'hr'"
+                [class.alt]="category !== 'hr'"
+              >HR</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                (click)="$event.preventDefault(); setCategory('ai')"
+                class="button super-small filter-btn"
+                [class.active]="category === 'ai'"
+                [class.alt]="category !== 'ai'"
+              >AI</a
               >
             </li>
             <li>
@@ -78,7 +68,17 @@
                 class="button super-small filter-btn"
                 [class.active]="category === 'formazione'"
                 [class.alt]="category !== 'formazione'"
-                >Formazione</a
+              >Formazione</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                (click)="$event.preventDefault(); setCategory('id')"
+                class="button super-small filter-btn"
+                [class.active]="category === 'id'"
+                [class.alt]="category !== 'id'"
+              >Instructional Design</a
               >
             </li>
           </ul>
@@ -89,9 +89,9 @@
         <div class="col-6 col-12-medium project-item" *ngFor="let p of pagedPosts">
           <section class="box project-card compact-card">
             <header><h4>{{ p.title }}</h4></header>
-            <a [href]="p.link || '#'" class="image centered small-img"><img [src]="p.image" [alt]="p.alt" /></a>
+            <a [routerLink]="['/blog', p.slug]" class="image centered small-img"><img [src]="p.image" [alt]="p.alt" /></a>
             <p style="font-size: 0.85em">{{ p.description }}</p>
-            <footer><a [href]="p.link || '#'" class="button super-small">Leggi di più</a></footer>
+            <footer><a [routerLink]="['/blog', p.slug]" class="button super-small">Leggi di più</a></footer>
           </section>
         </div>
       </div>
@@ -104,7 +104,7 @@
               (click)="$event.preventDefault(); setPage(page - 1)"
               class="button super-small alt"
               [class.disabled]="page === 1"
-              >Prev</a
+            >Prev</a
             >
           </li>
           <div id="blog-page-numbers-list" style="display: flex; align-items: center">
@@ -114,7 +114,7 @@
                 (click)="$event.preventDefault(); setPage(p)"
                 class="button super-small"
                 [class.alt]="p !== page"
-                >{{ p }}</a
+              >{{ p }}</a
               >
             </li>
           </div>
@@ -124,7 +124,7 @@
               (click)="$event.preventDefault(); setPage(page + 1)"
               class="button super-small alt"
               [class.disabled]="page === totalPages"
-              >Next</a
+            >Next</a
             >
           </li>
         </ul>
@@ -132,4 +132,3 @@
     </article>
   </div>
 </section>
-

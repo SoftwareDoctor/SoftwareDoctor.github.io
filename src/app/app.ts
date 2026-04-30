@@ -14,7 +14,16 @@ export class App {
   constructor() {
     this.router.events.pipe(filter((e) => e instanceof NavigationEnd)).subscribe(() => {
       const bodyClass = this.getDeepestBodyClass() ?? 'homepage';
-      document.body.className = `${bodyClass} is-preload`;
+      
+      // Preserviamo eventuali classi aggiunte da scripts esterni (es. is-touch, is-mobile di browser.js)
+      // ma rimuoviamo quelle di layout gestite da noi
+      const currentClasses = Array.from(document.body.classList);
+      const layoutClasses = ['homepage', 'no-sidebar', 'left-sidebar', 'right-sidebar', 'page-consulenza'];
+      
+      const classesToKeep = currentClasses.filter(c => !layoutClasses.includes(c) && c !== 'is-preload');
+      
+      document.body.className = [...classesToKeep, ...bodyClass.split(' '), 'is-preload'].join(' ');
+      
       window.setTimeout(() => document.body.classList.remove('is-preload'), 100);
     });
   }
